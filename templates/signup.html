@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}Sign Up{% endblock %}
+{% block content %}
+    <h1 class="page-title">Sign Up</h1>
+
+    <form method="POST" action="{{ url_for('signup') }}" class="auth-form">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" placeholder="Demo Max">
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="demo@demo.net" required>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+
+        <button type="submit" class="btn-primary">Sign Up</button>
+    </form>
+
+    <p class="switch-link">Already have an account? <a href="{{ url_for('login') }}">Login here</a></p>
+{% endblock %}
